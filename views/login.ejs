@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <% if (successMessage) { %>
+        <div class="success-container">
+        <div class="alert-success">
+         <p style="color:green;"> <%= successMessage %></p>
+        </div>
+        </div>
+      <% } %>
+      <div class="container">
+        <div class="image-container">
+          <img src="sign.jpg" alt="Login Image">
+        </div>
+    <form class="login-form" action="/dashboard" method="post">
+        <h2>Login</h2>
+    <label for="email">E-mail:</label>
+    <input type="email" name="email" id="email" placeholder="email"> 
+    
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" placeholder="PASSWORD"> 
+    
+    <button type="submit" >Log in</button>
+    <p class="signup-link">Not a user?<a href="/signup">signup</a></p>
+</form>
+</div>
+</body>
+</html>
+
